@@ -1,18 +1,18 @@
 ## Installation
 
-### 2. Install PHP Dependencies
+### 1. Install PHP Dependencies
 
 ```bash
 composer install
 ```
 
-### 3. Install JavaScript Dependencies
+### 2. Install JavaScript Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Environment Configuration
+### 3. Environment Configuration
 
 Copy the example environment file:
 
@@ -20,7 +20,7 @@ Copy the example environment file:
 cp .env.example .env
 ```
 
-### 5. Configure Database
+### 4. Configure Database
 
 Open the `.env` file and configure your PostgreSQL database:
 
@@ -40,7 +40,7 @@ DB_PASSWORD=your_password
 CREATE DATABASE your_database_name;
 ```
 
-### 6. Create Storage Symbolic Link
+### 5. Create Storage Symbolic Link
 
 ```bash
 php artisan storage:link
@@ -48,13 +48,13 @@ php artisan storage:link
 
 This links `public/storage` to `storage/app/public` for file uploads (product images and galleries).
 
-### 7. Run Database Migrations
+### 6. Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-### 8. Create Admin User
+### 7. Create Admin User
 
 Create your first Filament admin user:
 
