@@ -1,3 +1,67 @@
+## Installation
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install JavaScript Dependencies
+
+```bash
+npm install
+```
+
+### 4. Environment Configuration
+
+Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+### 5. Configure Database
+
+Open the `.env` file and configure your PostgreSQL database:
+
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+**Important**: Create the database in PostgreSQL before running migrations:
+
+```sql
+-- In PostgreSQL
+CREATE DATABASE your_database_name;
+```
+
+### 6. Create Storage Symbolic Link
+
+```bash
+php artisan storage:link
+```
+
+This links `public/storage` to `storage/app/public` for file uploads (product images and galleries).
+
+### 7. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Create Admin User
+
+Create your first Filament admin user:
+
+```bash
+php artisan make:filament-user
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
